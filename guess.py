@@ -6,8 +6,7 @@ def symbol1():
     pass1 = input("Enter password (1 symbol): ")
     counter = 0
     rand = random.choice(symbols)
-    if pass1 == rand:
-        print("OK, no attempts")
+    print(rand)
     while True:
         if pass1 == rand:
             print(str(counter) + " attempts")
