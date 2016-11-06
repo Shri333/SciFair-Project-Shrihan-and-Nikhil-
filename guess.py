@@ -2,7 +2,6 @@ import random
 
 symbols = ["#", "$", "&"]
 
-
 def random_algorithm(length):
     pass1 = input("Enter password (" + str(length) + " symbols): ")
     counter = 0
