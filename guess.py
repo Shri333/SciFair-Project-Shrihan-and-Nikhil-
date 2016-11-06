@@ -17,7 +17,8 @@ def symbol1():
             counter += 1
 
 def symbol2():
-    pass
+    rand = ''.join(random.choice(symbols) for i in range(2))
+    print(rand)
 
 def symbol3():
     pass
@@ -31,4 +32,9 @@ def symbol5():
 def symbol6():
     pass
 
-symbol1()
+# symbol1()
+symbol2()
+# symbol3()
+# symbol4()
+# symbol5()
+# symbol6()
