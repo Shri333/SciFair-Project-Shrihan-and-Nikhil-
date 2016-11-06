@@ -6,17 +6,16 @@ def symbol1():
     pass1 = input("Enter password (1 symbol): ")
     counter = 0
     rand = random.choice(symbols)
-    print(rand)
     if pass1 == rand:
-    	print("OK")
+        print("OK, no attempts")
     while True:
         if pass1 == rand:
             print(str(counter) + " attempts")
             break
         else:
-        	rand = random.choice(symbols)
-        	print(rand)
-        	counter += 1
+            rand = random.choice(symbols)
+            print(rand)
+            counter += 1
 
 def symbol2():
     pass
