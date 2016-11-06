@@ -11,7 +11,7 @@ def symbol1():
     	print("OK")
     while True:
         if pass1 == rand:
-            print(counter)
+            print(str(counter) + " attempts")
             break
         else:
         	rand = random.choice(symbols)
