@@ -16,5 +16,4 @@ def random_algorithm(length):
             print(rand)
             counter += 1
 
-
 random_algorithm(3)
