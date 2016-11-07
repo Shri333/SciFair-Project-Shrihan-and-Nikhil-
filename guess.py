@@ -2,6 +2,19 @@ import random
 
 symbols = ["#", "$", "&"]
 
+def random_compute(password, length):
+	counter = 0
+	rand = ''.join(random.choice(symbols) for i in range(length))
+	print(rand)
+	while True:
+		if password == rand:
+			print(str(counter) + " attempts")
+			break
+		else:
+			rand = ''.join(random.choice(symbols) for i in range(length))
+			print(rand)
+			counter += 1
+
 def random_algorithm(length):
     pass1 = input("Enter password (" + str(length) + " symbols): ")
     if len(pass1) != length:
@@ -13,17 +26,7 @@ def random_algorithm(length):
     			print("the password you entered has characters that do not equal the symbols listed above.")
     			found = False
     			break
-    	if found == True:	
-    		counter = 0
-    		rand = ''.join(random.choice(symbols) for i in range(length))
-    		print(rand)
-    		while True:
-    			if pass1 == rand:
-    				print(str(counter) + " attempts")
-    				break
-    			else:
-    				rand = ''.join(random.choice(symbols) for i in range(length))
-    				print(rand)
-    				counter += 1
+    	if found == True:
+    		random_compute(pass1, length)
     				
 random_algorithm(4)
