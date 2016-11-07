@@ -25,7 +25,7 @@ def random_algorithm(length):
     		if pass1[i] != symbols[0] and pass1[i] != symbols[1] and pass1[i] != symbols[2]:
     			print("the password you entered has characters that do not equal the symbols listed above.")
     			found = False
-    			break
+    			breaks
     	if found == True:
     		random_compute(pass1, length)
     				
