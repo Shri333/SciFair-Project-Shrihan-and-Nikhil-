@@ -2,7 +2,7 @@ import random
 
 symbols = ["#", "$", "&"]
 
-def execute_random_algorithm(password, length):
+def random_algorithm(password, length):
 	counter = 0
 	rand = ''.join(random.choice(symbols) for i in range(length))
 	print(rand)
@@ -15,7 +15,7 @@ def execute_random_algorithm(password, length):
 			print(rand)
 			counter += 1
 
-def random_algorithm(length):
+def execute_random_algorithm(length):
     pass1 = input("Enter password (" + str(length) + " symbols): ")
     if len(pass1) != length:
     	print("The password you entered is not the length specified")
@@ -27,6 +27,6 @@ def random_algorithm(length):
     			found = False
     			break
     	if found == True:
-    		random_compute(pass1, length)
+    		random_algorithm(pass1, length)
     				
 execute_random_algorithm(4)
