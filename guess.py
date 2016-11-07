@@ -2,7 +2,7 @@ import random
 
 symbols = ["#", "$", "&"]
 
-def random_compute(password, length):
+def execute_random_algorithm(password, length):
 	counter = 0
 	rand = ''.join(random.choice(symbols) for i in range(length))
 	print(rand)
@@ -29,4 +29,4 @@ def random_algorithm(length):
     	if found == True:
     		random_compute(pass1, length)
     				
-random_algorithm(4)
+execute_random_algorithm(4)
