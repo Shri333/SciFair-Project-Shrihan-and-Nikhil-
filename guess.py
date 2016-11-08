@@ -6,6 +6,8 @@ symbols = ["#", "$", "&"]
 # Split methods into more methods to refactor code.
 
 # Random algorithm method that uses a generator to generate passwords.
+
+
 def random_algorithm(password, length):
     # Initial counter for attempts.
     counter = 0
@@ -28,7 +30,9 @@ def random_algorithm(password, length):
             # Increment number of attempts.
             counter += 1
 
-# Main method where the password is checked based on length and characters.    		
+# Main method where the password is checked based on length and characters.
+
+
 def execute_random_algorithm(length):
     # Display Choose from #, $, and &.
     print("Choose from " + str(symbols))
