@@ -53,7 +53,7 @@ def execute_random_algorithm(length):
                 # Stop the loop and exit the program.
                 break
         # If the characters match then execute the random algorithm.
-        if found == True:
+        if found:
             # Execute the random algorithm.
             random_algorithm(password, length)
 
