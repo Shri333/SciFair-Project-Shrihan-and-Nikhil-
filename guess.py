@@ -54,4 +54,4 @@ def execute_random_algorithm(length):
 			random_algorithm(password, length)
 
 # Execute the main program with the length specified.
-execute_random_algorithm(6)
+execute_random_algorithm(3)
