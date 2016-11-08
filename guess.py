@@ -12,7 +12,7 @@ def random_algorithm(password, length):
     # Initial counter for attempts.
     counter = 0
     # Python generator for random algorithm.
-    rand = ''.join(random.choice(symbols) for i in range(length))
+    rand = ''.join(random.choice(symbols) for _ in range(length))
     # Main counter loop.
     while True:
         # If the password is equal to the generated password, then stop the loop and display the number of attempts.
@@ -26,7 +26,7 @@ def random_algorithm(password, length):
         # If the password is not equal to the generate password, then continue the loop and add an attempt (counter).
         else:
             # Generate a new password with algorithm.
-            rand = ''.join(random.choice(symbols) for i in range(length))
+            rand = ''.join(random.choice(symbols) for _ in range(length))
             # Increment number of attempts.
             counter += 1
 
