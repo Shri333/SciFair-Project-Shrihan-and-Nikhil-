@@ -2,13 +2,13 @@ import random
 
 symbols = ["#", "$", "&"]
 
-# Random algorithm method that uses a generator to generate passwords.
+# Random algorithm method that uses a iterator to generate passwords.
 
 
 def random_algorithm(password, length):
     # Initial counter for attempts.
     counter = 0
-    # Python generator for random algorithm.
+    # Python iterator for random algorithm.
     rand = ''.join(random.choice(symbols) for _ in range(length))
     # Main counter loop.
     while True:
