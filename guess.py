@@ -45,12 +45,15 @@ def execute_random_algorithm(length):
         if found:
             random_algorithm(password, length)
 
-# Execute the main program with the length specified.
+# Get length of password from user.
 password_length = input("Enter length of password: ")
 try:
+    # Try to convert password_length to an integer.
     password_length = int(password_length)
+    # Check if password_length is greater than 0.
     if password_length > 0:
         execute_random_algorithm(password_length)
+    # If not, then raise an error.
     else:
         raise ValueError
 except ValueError:
