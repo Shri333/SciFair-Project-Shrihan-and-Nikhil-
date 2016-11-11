@@ -2,7 +2,7 @@ import random
 
 symbols = ["#", "$", "&"]
 
-# Random algorithm method that uses a iterator to generate passwords.
+# Random algorithm method that uses an iterator to generate passwords.
 
 
 def random_algorithm(password, length):
@@ -17,7 +17,7 @@ def random_algorithm(password, length):
             print("Match found: " + rand)
             print(str(counter) + " attempts")
             break
-        # If the password is not equal to the generate password, then continue the loop and add an attempt (counter).
+        # If the password is not equal to the generate password, then continue the loop and increase the counter.
         else:
             rand = ''.join(random.choice(symbols) for _ in range(length))
             counter += 1
@@ -31,18 +31,18 @@ def execute_random_algorithm(length):
     password = input("Enter password (" + str(length) + " symbols): ")
     # Check if the length of the password inputted matches the length specified.
     if len(password) != length:
-        print("The password you entered is not the length specified.")
+        print("The length of the password you entered is not the length specified.")
     else:
-        # Boolean variable to store if the password has the right characters.
-        found = True
+        # Boolean variable to store if all the characters in the password match the characters listed in the symbols.4
+        match = True
         # Check if the password has the right characters by iterating through the password and checking each character.
         for i in range(length):
             if password[i] != symbols[0] and password[i] != symbols[1] and password[i] != symbols[2]:
                 print("the password you entered has characters that do not equal the symbols listed above.")
-                found = False
+                match = False
                 break
-        # If the characters match then execute the random algorithm.
-        if found:
+        # If the characters match then execute the random algorithm to guess the password.
+        if match:
             random_algorithm(password, length)
 
 # Get length of password from user.
@@ -57,4 +57,4 @@ try:
     else:
         raise ValueError
 except ValueError:
-    print("The length you entered is not a integer > 0.")
+    print("The length you entered is not a positive integer.")
