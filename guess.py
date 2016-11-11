@@ -31,7 +31,7 @@ def execute_random_algorithm(length):
     password = input("Enter password (" + str(length) + " symbols): ")
     # Check if the length of the password inputted matches the length specified.
     if len(password) != length:
-        print("The password you entered is not the length specified")
+        print("The password you entered is not the length specified.")
     else:
         # Boolean variable to store if the password has the right characters.
         found = True
@@ -46,4 +46,12 @@ def execute_random_algorithm(length):
             random_algorithm(password, length)
 
 # Execute the main program with the length specified.
-execute_random_algorithm(3)
+password_length = input("Enter length of password: ")
+try:
+    password_length = int(password_length)
+    if password_length > 0:
+        execute_random_algorithm(password_length)
+    else:
+        raise ValueError
+except ValueError:
+    print("The length you entered is not a integer > 0.")
