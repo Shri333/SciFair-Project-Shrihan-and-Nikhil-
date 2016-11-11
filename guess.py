@@ -33,7 +33,7 @@ def execute_random_algorithm(length):
     if len(password) != length:
         print("The length of the password you entered is not the length specified.")
     else:
-        # Boolean variable to store if all the characters in the password match the characters listed in the symbols.4
+        # Boolean variable to store if all the characters in the password match the characters in the symbols list.
         match = True
         # Check if the password has the right characters by iterating through the password and checking each character.
         for i in range(length):
